@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+   <!-- Insert to your webpage before the </head> -->
+   <script src="sliderengine/jquery.js"></script>
+   <script src="sliderengine/amazingslider.js"></script>
+   <link rel="stylesheet" type="text/css" href="sliderengine/amazingslider-1.css">
+   <script src="sliderengine/initslider-1.js"></script>
+   <!-- End of head section HTML codes -->
+   
+
+
+	<style>
+		*
+		{
+			margin: 0PX;
+			padding: 0PX;
+			box-sizing: border-box;
+		}
+		
+		#header
+		{
+			background-color:#316DC3;
+			width: 1250px;
+			height: 60px;
+		}
+		#menu
+		{
+			background-color:white;
+			width: 1250px;
+			height: 70px;
+			position: sticky;
+			top: -10px;
+			z-index: 1;
+			
+		
+		}
+		#slider
+		{
+			
+			width: 1250px;
+			height:500px;
+			background-color: #FFFFFF;
+		}
+		#content
+		{
+			background-color:#FFFFFF;
+			width: 1250px;
+			height: 900px;
+		}
+		#counter
+		{
+			background-color:#2755E9;
+			width: 1250px;
+			height: 270px;
+		}
+		#welfare
+		{
+			background-color:#F7F8FA;
+
+			width: 1250px;
+			height: 600px;
+		}
+		#mission
+		{
+			width: 1250px;
+			height: 500px;
+			background-color:white ;
+		
+		}
+		
+		#image
+		{
+			background-color:white;
+			width: 1250px;
+			height: 500px;
+		}
+		#link
+		{
+			background-color:#25272E;
+			width: 1250px;
+			height: 475px;
+		}
+		#footer
+		{
+			background-color:#316DD9;
+			width: 1250px;
+			height: 50PX;
+		}
+		button
+		{
+			color: black;
+			border:1px solid #C6DEAF; 
+			position: relative;
+			top: -30px;
+			left: 30px;
+			height: 30px;
+		      cursor: pointer;
+			  width: 90px; }
+	
+	#content span
+	{
+		font-size: 40px;
+	    color: #316DC3;
+		font-weight: bold;
+		font-family: 'Roboto Slab', serif;
+	}
+	#content a
+	{
+		font-size: 40px;
+		color:green;
+		font-weight: bold;
+		font-family: 'Roboto Slab', serif;
+	
+	}
+	#content hr
+	{
+		display: inline-block;
+		width: 40px;
+		border: 1px solid black;
+	}
+	
+	#content img{
+		width: 50px;
+	}
+	#content p
+	{
+		color:#777777;
+		font-size: 19px;
+		text-align: justify;
+		padding:6px 150px;
+		line-height: 40px;
+		margin-bottom: 10px;
+	
+
+	}
+	#counter p
+	{
+		color:white;
+		font-size: 54px;
+		font-family: 'Merriweather', serif;
+	}
+	#counter a
+	{
+color: white;
+font-size: 19px;
+font-weight: bold;
+
+	}
+	#counter a>span
+	{
+color:#00FF00;
+font-size: 19px;
+font-weight: bold;
+
+	}
+	#counter #inner_counter
+	{
+		display: inline-block;
+		margin:20px 10px 10px 20px;
+		
+		
+	}
+	#counter img
+	{
+       height: 40px;
+	}
+	#welfare p
+	{
+		color: #2755E9;
+		font-size: 40px;
+		font-weight: bold;
+		font-family: 'Roboto Slab', serif;
+	}
+	#welfare span
+	{
+		color:#427900;
+		font-size: 40px;
+		font-weight: bold;
+		font-family: 'Roboto Slab', serif;
+	}
+	#welfare hr
+	{
+		display: inline-block;
+		width: 40px;
+		border: 1px solid black;
+	}
+	#welfare #inner_welfare
+	{
+		background-color: #FFFFFF;
+		width: 350px;
+		height: 150px;
+		box-shadow: 0px 10px 10px #DFDFE1 ;
+		display: inline-block;
+		margin: 0px 50px 40px 0px;
+	}
+	#inner_welfare p
+	{
+		font-size: 19px;
+		font-weight: bold;
+	
+	}
+	#mission1
+	{
+		width: 800px;
+		height: 300px;
+	
+	    float: left;
+	}
+	#mission2
+	{
+		width: 430px;
+		height: 400px;
+	
+		display: inline-block; 
+	}
+	#mission1 p
+	{ 
+		font-weight: bold;
+		font-size: 24px;
+		color: #316DC3;
+		margin-left: 40px;
+		font-family: 'Roboto Slab', serif;
+	}
+	#mission hr
+	{
+		width: 50px;
+		border: 1px solid #427900;
+		margin-left: 40px;
+	}
+	#upcoming 
+	{
+		background-color:#F7F8FA;
+		border: 2px solid #F7F8FA;
+		width: 350px;
+		height: 70px;
+		margin-left: 40px;
+		margin-top: 30px;
+		float: left;
+	}
+	#upcoming img
+	{
+        margin-left: 30px;
+		margin-top: 10px;
+	      }
+	#upcoming span
+	{
+        margin-left: 30px;
+		color: #2755E9;
+		font-weight: bold;
+		margin-bottom: 50px;
+
+ 
+		
+		font-family: 'Roboto Slab', serif;
+	}
+	#mission2 p
+	{
+		font-weight: bold;
+		font-size: 24px;
+		color: #316DC3;
+		margin-left: 10px;
+		font-family: 'Roboto Slab', serif;
+
+
+	}
+	#mission2 #event_line
+	{
+		width: 50px;
+		border: 1px solid #427900;
+		margin-left: 10px;
+		display: inline-block;
+		
+	}
+	
+	#mission2 #event_line2
+	{
+		width: 350px;
+		border: 0.4px solid gray;
+		margin-left: 60px;
+		margin-top: -4px;
+		opacity:0.50;
+		
+		
+	}
+	#image p
+	{
+		color: #2755E9;
+		font-size: 34px;
+		font-weight: bold;
+		font-family: 'Roboto Slab', serif;
+	}
+	#image span
+	{
+		color:#427900;
+		font-size: 34px;
+		font-weight: bold;
+		font-family: 'Roboto Slab', serif;
+	}
+	#image hr
+	{
+		display: inline-block;
+		width: 40px;
+		border: 1px solid black;
+	}
+	#inner_gallery
+	{
+		margin-left: 90px;
+		margin-top: 40px;
+		float:left;
+	}
+	#link1
+	{
+		margin-left: 30PX;
+		padding-top:70PX;
+		display: inline-block;
+	}
+	#link1 p
+	{
+		color:#777777 ;
+		font-size: medium;
+		font-family: 'Jost', sans-serif;
+	}
+	#link1 span
+	{
+		color:#777777 ;
+		font-size: medium;
+		font-family: 'Jost', sans-serif;
+		
+
+	} 
+	#link2
+	{position: relative;
+	top: -350px;
+	left: 530px;
+	
+	width: 300PX;
+	
+
+	}
+	#link2 p
+	{
+       display: inline-block;
+	   color: white;
+	   font-family: 'Roboto Slab', serif;
+	   font-size: medium;
+
+	}
+	#link2 #link_line1	{
+		width: 50px;
+		border: 1px solid #427900
+		
+		
+	}
+	
+	#link2 #link_line2
+	{
+		width: 300px;
+		border: 0.4px solid gray;
+		
+	
+		opacity:0.50;
+		
+		
+	}
+	#link3
+	{
+       display: inline-block;
+       position: relative;
+	top: -390px;
+	left: 900px;
+	width: 300PX;
+
+	}
+	#link3 p
+	{
+       display: inline-block;
+	   color: white;
+	   font-family: 'Roboto Slab', serif;
+	   font-size: medium;
+
+	}
+	#link3 img
+	{
+	margin-right: 30px;
+	}
+	#footer p
+	{
+		font-size: 13px;
+		color: white;
+		font-family: 'Roboto Slab', serif;
+		padding-left: 30px;
+		padding-top: 10px;
+	} 
+
+
+
+
+
+
+
+	ul#main>li {
+
+display: inline-block;
+
+
+
+
+}
+
+li#li1>a {
+text-decoration: none;
+background-color: white;
+font-size: 18px;
+color: black;
+line-height: 50px;
+padding: 10px 20px 10px 20px;
+
+border-radius: 30px;
+text-align: center;
+
+
+}
+
+a#home {
+text-decoration: none;
+background-color: #316DC3;
+font-size: 18px;
+color: black;
+
+padding: 10px 20px 10px 10px;
+height: 150px;
+border-radius: 30px;
+text-align: center;
+
+}
+
+li#li1>a:hover {
+text-decoration: none;
+background-color: #316DC3;
+font-size: 18px;
+color: white;
+
+padding: 10px 20px 10px 20px;
+height: 150px;
+border-radius: 30px;
+text-align: center;
+}
+
+ul ul {
+display: none;
+position: absolute;
+top: 65x;
+}
+
+ul li:hover>ul {
+display: block;
+}
+
+li#li2 {
+display: block;
+line-height: 40px;
+background-color: white;
+width: 200px;
+}
+
+li#li2>a {
+text-decoration: none;
+
+font-size: 15px;
+color: #676767;
+height: 200px;
+
+padding: 10px 20px 10px 10px;
+
+
+text-align: center;
+}
+
+li#li2:hover {
+background-color: #316DC3;
+
+
+}
+
+li#li2>a:hover {
+color: white;
+padding-left: 0px;
+text-decoration: none;
+
+font-size: 15px;
+height: 200px;
+
+padding-left: 20px;
+text-align: center;
+}
+
+ul ul ul#ul1 {
+display: none;
+position: absolute;
+top: 0px;
+left: 200px;
+}
+
+ul ul li:hover>ul#ul1 {
+display: block;
+}
+
+ul ul ul#ul2 {
+display: none;
+position: absolute;
+top: 41px;
+left: 200px;
+}
+
+ul ul li:hover>ul#ul2 {
+display: block;
+}
+
+ul ul ul#ul3 {
+display: none;
+position: absolute;
+top: 81px;
+left: 200px;
+}
+
+ul ul li:hover>ul#ul3 {
+display: block;
+}
+
+ul ul ul#ul4 {
+display: none;
+position: absolute;
+top: 365px;
+left: 200px;
+}
+
+ul ul li:hover>ul#ul4 {
+display: block;
+}
+
+ul ul ul#ul5 {
+display:none ;
+position: absolute;
+top: 203px;
+left: 200px;
+}
+
+ul ul li:hover>ul#ul5 {
+display:block;
+}
+ul ul ul ul#ul_inner1 {
+display:none ;
+position: absolute;
+top: 0px;
+left: 200px;
+}
+
+ul ul ul li:hover>ul#ul_inner1{
+display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+	</style>
+
+</head>
+<body>
+	<div id="header">
+            <div style="position: relative; left: 80px; width: 1100px;" >
+				<a href="#3">
+					<img src="img/twitter.png" width="30px" style="position: relative;top: 5;">
+				</a>
+				<a href="#3">
+					<img src="img/instagram.png" width="30px" style="position: relative; top: -20px; left: 20px;">
+				</a>
+
+				<a href="#3">
+				<img src="img/youtube.png" width="30px" style="position: relative; top: -15px; left: 40px;">
+			</a>
+			   <a href="#3">
+				<img src="img/whatspp.png" width="40px"style="position: relative; top: -20px; left: 50px;">
+			</a>
+			<span style="color: white; font-size: 18px; margin-left: 90px; position: relative;top: -27px;">
+				Millions of people's life has changed, millions more awaiting your donation
+
+			</span>
+			<button >
+				UK Donor
+			</button>
+			<button >
+				Donate Now
+			</button>
+			<button >
+				SMIT Results
+			</button>
+			</div>
+	</div>
+	<div id="menu">
+
+
+
+
+
+		<div id="men" style="width: 900px; background-color:white; margin-left: 290px; padding-top: 10px;">
+			<ul id="main">
+				<li><A href="#3" id="home">Home</li></A>
+				<li id="li1" </li><A href="#3">About &nbsp<span><img src="img/arrow.png" width="13px" </span></A>
+					<ul>
+						<li id="li2"><a href="#3">Introduction</a></li>
+						<li id="li2"><a href="#3">Chairman Message</a></li>
+						<li id="li2"><a href="#3">Salaynai Annual Report</a></li>
+					</ul>
+				</li>
+				<li id="li1"><A href="#3">Salayni Services &nbsp<span><img src="img/arrow.png" width="13px" </span></A>
+					<ul>
+						<li id="li2"><a href="#3">Education &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span><img src="img/arrow2.png" width="7px" </span></a>
+							<ul id="ul1">
+								<li id="li2"><a href="#3">Salaynai Mass IT  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span><img src="img/arrow2.png" width="7px" </span></a>
+									<ul id="ul_inner1">
+										<li id="li2"><a href="#3">Introduction</a></li>
+										<li id="li2"><a href="#3">Chairman Message</a></li>
+										<li id="li2"><a href="#3">Chairman Message</a></li>
+										<li id="li2"><a href="#3">Salaynai Annual Report</a></li>
+									</ul>
+								
+								</li>
+								<li id="li2"><a href="#3">Salaynai incublator</a></li>
+								<li id="li2"><a href="#3">Green House</a></li>
+							</ul>
+	
+						</li>
+						<li id="li2"><a href="#3">Medical &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span><img src="img/arrow2.png" width="7px" </span></a>
+							<ul id="ul2">
+								<li id="li2"><a href="#3">Ijkfbwekh</a></li>
+								<li id="li2"><a href="#3">sn wej</a></li>
+								<li id="li2"><a href="#3">hbwejeh</a></li>
+							</ul>
+	
+						</li>
+						<li id="li2"><a href="#3">Welfare &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span><img src="img/arrow2.png" width="7px" </span></a>
+							<ul id="ul3">
+								<li id="li2"><a href="#3">Ijkfbwekh</a></li>
+								<li id="li2"><a href="#3">sn wej</a></li>
+								<li id="li2"><a href="#3">hbwejeh</a></li>
+							</ul>
+						</li>
+						<li id="li2"><a href="#3">Hajab Application Form</a></li>
+						<li id="li2"><a href="#3">Salaynai Dasterkhwan</a></li>
+						<li id="li2"><a href="#3">Salaynai Ro Plant</a></li>
+						<li id="li2"><a href="#3">Salaynai Sadqa</a></li>
+						<li id="li2"><a href="#3">online taweezzat/Istekhara</a></li>
+						<li id="li2"><a href="#3">Salaynai jop Bank</a></li>
+						<li id="li2"><a href="#3">Online Quran Academy &nbsp<span><img src="img/arrow2.png" width="7px" </span></a>
+							<ul id="ul4">
+								<li id="li2"><a href="#3">Introduction</a></li>
+								<li id="li2"><a href="#3">Chairman Message</a></li>
+								<li id="li2"><a href="#3">Salaynai Annual Report</a></li>
+							</ul>
+	
+						</li>
+						<li id="li2"><a href="#3">Books</a></li>
+						<li id="li2"><a href="#3">Salaynai online Masjad</a></li>
+	
+					</ul>
+				</li>
+				<li id="li1"><A href="#3">Future Projects &nbsp<span><img src="img/arrow.png" width="13px" </span></A>
+					<ul>
+						<li id="li2"><a href="#3">Introduction</a></li>
+						<li id="li2"><a href="#3">Chairman Message</a></li>
+						<li id="li2"><a href="#3">Salaynai Annual Report</a></li>
+					</ul>
+	
+				</li>
+				<li id="li1"><A href="#3">Media</A></li>
+				<li id="li1" id="li1"><A href="#3">News</A></li>
+				<li id="li1"><A href="#3">Donation &nbsp<span><img src="img/arrow.png" width="13px" </span></A>
+	
+					<ul>
+						<li id="li2"><a href="#3">Introduction</a></li>
+						<li id="li2"><a href="#3">Chairman Message</a></li>
+						<li id="li2"><a href="#3">Salaynai Annual Report</a></li>
+						<li id="li2"><a href="#3">Introduction</a></li>
+						<li id="li2"><a href="#3">Chairman Message</a></li>
+						<li id="li2"><a href="#3">Salaynai Annual Report &nbsp<span><img src="img/arrow2.png" width="7px" </span></a>
+						
+							<ul id="ul5">
+								<li id="li2"><a href="#3">Introduction</a></li>
+								<li id="li2"><a href="#3">Chairman Message</a></li>
+								<li id="li2"><a href="#3">Salaynai Annual Report</a></li>
+								<li id="li2"><a href="#3">Introduction</a></li>
+								<li id="li2"><a href="#3">Chairman Message</a></li>
+								<li id="li2"><a href="#3">Salaynai Annual Report</a></li>
+							</ul>
+						
+						</li>
+						<li id="li2"><a href="#3">Salaynai Annual Report</a></li>
+					</ul>
+				
+				</li>
+				
+			
+			</ul>
+		</div>
+
+
+
+
+
+
+
+	</div>
+	<div id="slider">
+
+
+                       <!-- Insert to your webpage where you want to display the slider -->
+    <div class="amazingslider-wrapper" id="amazingslider-wrapper-1" style="display:block;position:relative;max-width:1240px;margin:0px auto 0px;">
+        <div class="amazingslider" id="amazingslider-1" style="display:block;position:relative;margin:0 auto;">
+            <ul class="amazingslider-slides" style="display:none;">
+                <li><img src="images/bc033aaf-0f16-4983-a0e9-c94e9b07a3ca-311.jpeg" />
+                </li>
+                <li><img src="images/a-large-number-of-people-gather-at-vehicle-saylani-welfare-trust-as-C57MY0.jpg" />
+                </li>
+                <li><img src="images/saylanibanner.jpg" />
+                </li>
+                <li><img src="images/download.jpg" />
+                </li>
+                <li><img src="images/download%20%281%29.jpg" />
+                </li>
+                <li><img src="images/Kifalat-340x231.jpg" />
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- End of body section HTML codes -->
+   
+
+
+	</div>
+
+
+
+
+	<div  style="position: static; top: 0px; background-color:#FFFFFF; width: 1250;">
+		<center>
+			<marquee width="1100px" height="25px" direction="left" scrollamount="6" onmouseover="this.stop();" onmouseout="this.start();"style="background-color: #316DC3;" >
+                            <font color="#00FF00">(News-1 Dated:15-06-2019)<font color="#FFFFFF">&#160;&#160;PIAICNext Phase Admission in Islamabad And Faisalabad" . <a href="https://www.facebook.com/saylaniwelfare/photos/a.258515937507690/3441173892575196/?type=3&theater" style="color: blue">More Details</a> &#160;&#160;
+                            <font color="#00FF00">(News-2 Dated:15-05-2019)<font color="#FFFFFF">&#160;&#160;Saylani Welfare Announced "Donation Application" . <a href="https://web.facebook.com/saylaniwelfare/photos/a.258515937507690/3332489120110341/?type=3&theater" style="color: blue">More Details</a> &#160;&#160;
+                            <font color="#00FF00">(News-3 Dated:07-05-2019)<font color="#FFFFFF">&#160;&#160;Alhamdulillah Saylani Organized 200+ Locations For Iftar And Sehri In This Holy Month . <a href="https://www.facebook.com/saylaniwelfare/?type=3&theater" style="color: blue">More Details</a> &#160;&#160;
+                            <font color="#00FF00">(News-4 Dated:08-03-2019)<font color="#FFFFFF">&#160;&#160;Saylani Welfare Distributing Ration & Clothes to affected people of Balochistan. <a href="https://www.facebook.com/saylaniwelfare/posts/3164679946891260?__tn__=-R" style="color: blue">More Details</a> &#160;&#160;
+                            <font color="#00FF00">(News-5 Dated:25-02-2019)<font color="#FFFFFF">&#160;&#160;PIAIC Entrance Exam Merit Ranking List Announced. <a href="https://www.facebook.com/saylaniwelfare/photos/a.258515937507690/3135220066503915/?type=3&theater>" style="color: blue">More Details</a>&#160;&#160;
+                            <font color="#00FF00">(News-6 Dated:23-02-2019)<font color="#FFFFFF">&#160;&#160;President of Pakistan (Dr. Arif Alvi) Visited Saylani Welfare International Trust HeadOffice Karachi. <a href="https://www.facebook.com/saylaniwelfare/posts/3135103563182232?__xts__[0]=68.ARD9PTgM3DL_2vvulRqQ-b25KUD2P8X7TSS9g6gbxDfRdIBqgjNGJffSbV0ZcFmUFF5Ocrn-wvtpvDbjWBQxq0UHTlRJR1vEkgUOfm8Vk0ltcQp9K5q268QBcUMjujlPyCnBIxXcbe_Qjqbw1DXfCLQ1fFwBdGk77ndYxRXPrUVHrYybrBb5jWxu8GJQ37RpI7LLayc6xkve6gO149Ud-NWv_eF72blzToVI2fZW2ZWJUlRFSgWFK5jgrDGcsP-I7NBis9UXNfBBb55nXahKzJHvloneJh93hN9Wc3bIyvpn7v1IJSixyqcGRr_KHC-mO46gL9JUYx_acVfGdQDLUCBORw&__tn__=-R>" style="color: blue">More Details</a> &#160;&#160;                    
+                            <font color="#00FF00">(News-7 Dated:19-02-2019)<font color="#FFFFFF">&#160;&#160;Dr Jamil Ahmed (Additional Inspector General of Police) & Atiqmir Visit Saylani Welfare International Trust, Saylani Mass I.T. Training. <a href="https://www.facebook.com/saylaniwelfare/posts/3124996217526300?__xts__[0]=68.ARCElwXqFXBXobZcA_UIl5WsTnqek6hA0692UZgzLiTQcX71VvEVoMgzqDV_LCU8l4vgjmKHex8j5abeGcQPzz-0Vo7g8gNqrP0CK04uhT29KI7ZBXw7L0UhSE9vpr7JOS4591gwSiYhmPbI_exl5O0PUbYyqzRyVjDhZf833fadxaHMxR3LURDcRfhfFRurM3x6cKNgZ7XwQi2vP6tA2-XS4HUzYNRUfZ5Yc4iUJAwXHOGi64EA62Drmy5c0mv0CZumqreWzE6JGBGOlQC5dMh7k07-qNBGwItqzarzu8CiNWC9kZMwzYyExhOY7JKF76U1ZzEbClh6A-yQYJ-qY1jbYQ&__tn__=-R>" style="color: blue">More Details</a> &#160;&#160;     
+                        </marquee>
+		</center>
+	</div>
+	<div id="content">
+      <center>
+		<br><br><br>
+		<span>
+			INTRO
+			<a>
+				DUCTION
+			</a>
+		</span>
+		
+		<br><br>
+		<hr>
+		<img src="img/logo.png">
+		<hr><br>
+		<p>
+		Established in May 1999 by famous spiritual and religious scholar Maulana Bashir Ahmed Farooqui, Saylani Welfare International Trust was built on the fundamentals of breaking the cycle of poverty, alleviating the financial troubles of the poor, giving people a chance to live a dignified life and spreading happiness.
+		</p><br>
+<p>
+We are an organization that believes in lighting up the lives of underprivileged people across the world. We endeavor to provide the best quality services in areas including food, education, medical and social welfare free of cost to people living in the dark. With over 60 different sectors, we feed thousands of hungry people each day, hundreds more are given the hope of life through medical health care, many are educated to become leaders of tomorrow and several are given the opportunity to stand on their feet financially.
+</p><br>
+<p>
+Today, we are proud to say that our physical presence extends throughout Pakistan with a vast network of 125 branches operating in major cities including Karachi, Lahore, Islamabad, Rawalpindi, Hyderabad and Faisalabad. Apart from Pakistan, we have overseas offices in the UK, USA and UAE as well. Our worldwide branches are operating under the guidance of a team of over 2,000 working professionals who help almost 125,000 people on a daily basis.
+</p><br>
+<p>
+We strongly believe that a little help goes a long way and our work would not be possible without the generous support of our valuable donors. Our local and international donors have graciously lent us a hand by supporting our causes and enabling us to serve the needs of people in need.
+</p>
+	</center>
+	
+	</div>
+	<br><br><br><br>
+	<div id="counter"> 
+		<center>
+      <div id="inner_counter">
+	  <img src="img/food.png"><br>
+	  <p>
+		  12,5000
+	  </p><br>
+	  <a>
+		  DAILY PAKISYAN
+		  <Span>
+			  (MONTHLY)
+		  </Span>
+	  </a>
+	</div>
+	<div id="inner_counter">
+		<img src="img/family.png"><br>
+		<p>
+			7,500
+		</p><br>
+		<a>
+			DAILY PAKISYAN
+			<Span>
+				(MONTHLY)
+			</Span>
+		</a>
+	  </div>
+	  <div id="inner_counter">
+		<img src="img/doctor.png"><br>
+		<p>
+			43,749
+		</p><br>
+		<a>
+			DAILY PAKISYAN
+			<Span>
+				(MONTHLY)
+			</Span>
+		</a>
+	  </div>
+	  <div id="inner_counter">
+		<img src="img/education.png"><br>
+		<p>
+		180,000
+		</p><br>
+		<a>
+			DAILY PAKISYAN
+			<Span>
+				(MONTHLY)
+			</Span>
+		</a>
+	  </div>
+	</center>
+	   
+	</div>
+	<div id="welfare">
+		<br><br><br>
+		<center>   
+		<p>
+			   WHAT WE
+			   <span>
+				   ARE DOING
+			   </span>
+		   </p>
+		   
+		<hr>
+		<img src="img/logo.png">
+		<hr><br><br>
+           <div>
+			   <div id="inner_welfare"><BR><br>
+				 <img src="img/sadqah.png" width="50px"><br><br>
+				 <P>
+					 ONLINE SADQAH
+				 </P>
+			   </div>
+			   <div id="inner_welfare"><BR><br>
+				<img src="img/welfare.png" width="50px"><br><br>
+				<P>
+					WELFARE
+				</P>
+			  </div>
+			  <div id="inner_welfare"><BR><br>
+				<img src="img/medical.png" width="50px"><br><br>
+				<P>
+					MEDICAL
+				</P>
+			  </div>
+			  <div id="inner_welfare"><BR><br>
+				<img src="img/Dastarkhwan.png" width="50px"><br><br>
+				<P>
+					 DASTARkHWAN
+				</P>
+			  </div>
+			  <div id="inner_welfare"><BR><br>
+				<img src="img/water.png" width="50px"><br><br>
+				<P>
+					RO PLANT
+				</P>
+			  </div>
+			  <div id="inner_welfare"><BR><br>
+				<img src="img/edu.png" width="50px"><br><br>
+				<P>
+					EDUCATION
+				</P>
+			  </div>
+		   </div>
+
+		</center>
+	</div>
+	
+	<div id="mission"><br><br><br>
+		<div id="mission1">
+			<p>
+				MISSION AND UPCOMING PROJECTS
+			</p>
+			<hr>
+
+
+            <div id="upcoming">
+				 <img src="img/pic1.png" width="30px">
+				 <span>
+					HEPATITIS
+				 </span>
+			</div>
+            <div id="upcoming">
+				<img src="img/housing.png" width="30px">
+				<span>
+				   HOUSING SOCIETY
+				</span>
+		   </div>
+		   <div id="upcoming">
+			<img src="img/IT.png" width="30px">
+			<span>
+			   IT LITERCY
+			</span>
+	   </div>
+	   <div id="upcoming">
+		<img src="img/THARPARKAR.png" width="30px">
+		<span>
+			THARPARKAR
+		</span>
+   </div>
+
+
+		</div>
+		<div id="mission2">
+			<p>
+				Upcoming Events
+			</p>
+			<hr id="event_line">
+			<hr id="event_line2">
+
+			<marquee style="margin-left: 20px; color:#777777;" direction="up" width="250" height="300" scrollamount="2" onmouseover="this.stop();" onmouseout="this.start();"> -->
+				Saylani Welfare Distributing Ration & Clothes to affected people of Balochistan .<a href="https://www.facebook.com/saylaniwelfare/posts/3164679946891260?__tn__=-R" style="color: blue">More Details</a> <br><br>
+				Entry Test Accouncement (Graphic Designing & Video Editing/Animation Course) On Sunday 3rd March 2019 @ 11:00Am Vanue: 4rh Floor, Saylani Welfare International Trust HeadOffice Bahadurabad .<a href="https://www.facebook.com/saylaniwelfare/photos/a.258515937507690/3152781434747778/?type=3&theater>" style="color: blue">More Details</a> <br><br>
+				Dr Jamil Ahmed (Additional Inspector General of Police) & Atiqmir Visit Saylani Welfare International Trust, Saylani Mass I.T. Training .<a href="https://www.facebook.com/saylaniwelfare/posts/3124996217526300?__xts__[0]=68.ARCElwXqFXBXobZcA_UIl5WsTnqek6hA0692UZgzLiTQcX71VvEVoMgzqDV_LCU8l4vgjmKHex8j5abeGcQPzz-0Vo7g8gNqrP0CK04uhT29KI7ZBXw7L0UhSE9vpr7JOS4591gwSiYhmPbI_exl5O0PUbYyqzRyVjDhZf833fadxaHMxR3LURDcRfhfFRurM3x6cKNgZ7XwQi2vP6tA2-XS4HUzYNRUfZ5Yc4iUJAwXHOGi64EA62Drmy5c0mv0CZumqreWzE6JGBGOlQC5dMh7k07-qNBGwItqzarzu8CiNWC9kZMwzYyExhOY7JKF76U1ZzEbClh6A-yQYJ-qY1jbYQ&__tn__=-R>" style="color: blue">More Details</a>   <br><br> 
+				PIAIC Entrance Exam Merit Ranking List Announced.<a href="https://www.saylaniwelfare.com/result" style="color: blue">More Details</a>  <br><br> President of Pakistan (Dr. Arif Alvi) Visited Saylani Welfare International Trust HeadOffice Karachi. <a href="https://www.facebook.com/saylaniwelfare/posts/3135103563182232?__xts__[0]=68.ARD9PTgM3DL_2vvulRqQ-b25KUD2P8X7TSS9g6gbxDfRdIBqgjNGJffSbV0ZcFmUFF5Ocrn-wvtpvDbjWBQxq0UHTlRJR1vEkgUOfm8Vk0ltcQp9K5q268QBcUMjujlPyCnBIxXcbe_Qjqbw1DXfCLQ1fFwBdGk77ndYxRXPrUVHrYybrBb5jWxu8GJQ37RpI7LLayc6xkve6gO149Ud-NWv_eF72blzToVI2fZW2ZWJUlRFSgWFK5jgrDGcsP-I7NBis9UXNfBBb55nXahKzJHvloneJh93hN9Wc3bIyvpn7v1IJSixyqcGRr_KHC-mO46gL9JUYx_acVfGdQDLUCBORw&__tn__=-R>" style="color: blue">More Details</a>                    
+			</marquee>
+
+
+
+		</div>
+           
+	</div>
+
+	
+	<div id="image">
+		
+		<br><br>
+		<center>   
+		<p>
+			   IMAGE
+			   <span>
+				   GALLERY
+			   </span>
+		   </p>
+		   
+		<hr>
+		<img src="img/logo.png">
+		<hr><br><br>
+		</center>
+		<div id="inner_gallery">
+		  <img src="img/img1.jpg" width="250px" height="150px">
+		  <img src="img/img2.jpg" width="250px" height="150px">
+		  <img src="img/img3.jpg" width="250px" height="150px">
+		  <img src="img/img4.jpg" width="250px" height="150px">
+		  
+		</div>
+           
+	</div>
+	<div id="link">
+		<div id="link1">
+			<p>
+				Head Office,<br>
+				A-25, Bahadurabad Chowrangi Karachi, Pakistan
+			</p><br><br>
+			<img src="img/phone.png" width="19px">
+			<span>
+				UAN: 111-729-526
+			</span><br><br>
+			<img src="img/earth.png" width="15px">
+			<span>
+				(+0092-213) 4130786-90
+			</span><br><br>
+			<img src="img/phone.png" width="15px">
+			<span>
+				CELL: 92-311-1729526
+			</span><br><br>
+			<img src="img/phone.png" width="15px">
+			<span>
+				USA NO +1(716)941 7792
+			</span><br><br>
+			<img src="img/phone.png" width="15px">
+			<span>
+				UK NO (+44)115 970 6256
+			</span><br><br>
+            <img src="img/email.png" width="15px">
+			<span>
+				info@saylaniwelfare.com
+			</span><br><br>
+
+		</div>
+		<div id="link2">
+         <p>
+			 Useful Links
+		 </p><br><br>
+		 <hr id="link_line1">
+		 <hr id="link_line2">
+		 
+		</div>
+		<div id="link3">
+       <p>
+		   Contact with US
+	   </p><br><br>
+	   <a href="#3">  
+	   <img src="img/twitter.png" width="19px" style="position: relative; top: 10px;">
+	</a>
+	   <a href="#2">
+	   <img src="img/instagram.png" width="19px">
+	</a>
+	   <a href="#e">
+		<img src="img/youtube.png" width="19px">
+	</a>
+		</div> 
+           
+	</div>
+	<div id="footer">
+	<p>	Copyright © 2020 Saylani Welfare </p> 
+	</div>
+</body>
+</html>
